@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 <head>
 	<title>Please fill this form for help</title>
 		<meta charset="utf-8">
@@ -6,6 +6,18 @@
 		<link rel="stylesheet" href="C:\Users\Night\Documents\GitHub\MART-120\Week 7\bootstrap-5.1.3-dist">
 		<script src="C:\Users\Night\Documents\GitHub\MART-120\Week 7\bootstrap-5.1.3-dist\js"></script>
 		<script src="C:\Users\Night\Documents\GitHub\MART-120\Week 7\bootstrap-5.1.3-dist\js"></script>
+		<script>
+			function checkboxes()
+			{
+				var firstName = document.getElementById("fName").value;
+				if(firstName ==""){
+					document.getElementById('fName').style.backgroundColor = "red";
+					document.getElementById('fName').focus();
+					console.log("debugging");
+				}
+				}
+			</script>
+
 </head>
 <body>
 	<form action="nextPage.html" type="Post">
