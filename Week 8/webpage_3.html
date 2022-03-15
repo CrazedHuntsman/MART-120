@@ -9,27 +9,38 @@
 		<script>
 			function checkboxes()
 			{
-				var firstName = document.getElementById("eName").value;
-				if(firstName =="")
-				{
-					document.getElementById('eName').style.backgroundColor = "red";
-					document.getElementById('eName').focus();
-					console.log("debugging");
+				var firstName = document.getElementById("fName").value; if(fName == "") {
+					document.getElementById("fName").focus();
+					document.getElementById("fName").required = true;
+					document.getElementById("fName").style.backgroundColor = "red";
 				}
-				}
+			}
 			</script>
-
 </head>
 <body>
 	<form action="nextPage.html" type="Post">
 	First Name: <input type="text" id="fName"><br>
 	Last Name: <input type="text" id="fName"><br>
 	Reason For Request: <input type="text" id="fName"><br>
-	Email Address: <input type="text" id="eName"><br>
-	Do you agree to terms of agreement?<br> <input type="checkbox" name="yes" value="yes">Yes<br>
+	Email Address: <input type="text" id="fName"><br>
+	Do you agree to terms of agreement?<br> <input type="checkbox" name="yes" id="yesButton" value="yes">Yes<br>
 	<input type="checkbox" name="No" value="no">No<br>
 	<button id="mySubmit" type="button">Submit</button>
 	</form>
+	<script>
+		function checkbox()
+	{
+		document.getElementById('yesButton').required = true;
+		if (yesButton = false) {
+				focusMethod = function getfocus()
+				{
+				 document.getElementById('yesButton').focus();
+				 alert("agrement is required");
+			 }
+		 }
+	 }
+
+	</script>
 </body>
 
 </html>
