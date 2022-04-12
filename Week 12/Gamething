@@ -1,0 +1,103 @@
+<html>
+<script src="p5.js"></script>
+var redColor = 24;
+var greenColor = 50;
+var blueColor = 160;
+var mousex = 0;
+var mousey = 0;
+var t1 = 100;
+var t2 = 200;
+var t3 = 40;
+var t4 = 50;
+var t5 = 70;
+var t6 = 20;
+var x = 100;
+var y = 200;
+var cx = 250;
+var cy = 130;
+var cd = 55;
+var diameter = 70;
+var Ex = 500;
+var Ey = 100;
+var Ed = 35;
+var Er = 55;
+
+function setup() {
+  createCanvas(600, 325);
+}
+
+function draw() {
+  background(35,50,150);
+  fill(200,200,50);
+  triangle(t1,t2,t3,t4,t5,t6);
+  fill(200,50,25);
+  circle(x,250, diameter);
+  ellipse(mousex,mousey,30,50)
+  ellipse(Ex,Ey,Ed,Er)
+  x++;
+  if(x <= 500)
+  {
+    x+=5
+  }
+  else{
+    x-=400
+  }
+  t1++;
+  t3++;
+  t5++;
+  if(t1 <= 200)
+  {
+  }
+  else{
+    t1-=200
+  }
+  if (t2 <= 400)
+    {
+    }
+  else{
+    t2-=400
+  }
+  if(t3 <= 80)
+    {
+    }
+  else{
+    t3-=80
+  }
+  if(t4 <= 100){
+  }
+  else{t4-=100
+      }
+  if(t5 <= 140){
+  }
+  else{t5-=140}
+  if(t6 <= 40){}
+  else{t6-=40}
+   fill(30,250,70)
+  circle(cx,cy,cd);
+  function keyPressed(){
+  if(key == "d"){
+  cx+=10
+  }
+    else if (key == "a"){
+      cx-=10
+    }
+    if(key == "w"){
+      cy+=10
+    }
+    else if (key == "s"){
+      cy-=10
+    }
+  }
+  function mouseClicked(){
+    mousex = mouseX;
+    mousey = mouseY;
+  }
+  Ex--;
+  Ey++;
+  if(Ex <=300){
+    Ex+=100
+  }
+  else if (Ey>=200){
+    Ey-=100
+  }
+  </html>
