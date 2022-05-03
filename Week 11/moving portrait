@@ -1,0 +1,30 @@
+var ex1 = 155;
+var ey1 = 135;
+var ed1 = 30;
+var er1 = 20;
+var ex2 = 240;
+var ey2 = 135;
+var ed2 = 30;
+var er2 = 20;
+function setup() {
+        createCanvas(400, 400);
+      }
+
+      function draw() {
+        background(220);
+        triangle(200,75,105,250,295,250);
+        circle(200,150,150);
+        square(125,220,150);
+        ellipse(ex1,ey1,ed1,er1);
+        ellipse(ex2,ey2,ed2,er2);
+        triangle(200,170,180,175,200,180);
+        ellipse(200,90,100,40);
+        rect(235,195,40,70);
+        rect(120,195,40,70);
+        line(170,200,220,195);
+        point(170,250)
+        textSize(17);
+        text('self portrait',155,35);
+        textSize(12)
+        text('Damian Beardslee',290,390)
+      }
