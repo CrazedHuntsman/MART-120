@@ -1,0 +1,171 @@
+var Xs = [];
+var Ys = [];
+var Diameters = [];
+var redColor = 24;
+var greenColor = 50;
+var blueColor = 160;
+var mousex = 0;
+var mousey = 0;
+var t1 = 100;
+var t2 = 200;
+var t3 = 40;
+var t4 = 50;
+var t5 = 70;
+var t6 = 20;
+var x = 100;
+var y = 200;
+var cx = 250;
+var cy = 130;
+var cd = 55;
+var diameter = 70;
+var Ex = 500;
+var Ey = 100;
+var Ed = 35;
+var Er = 55;
+var mousecx = 400
+var mousecy = 450
+
+class sword{
+  constructor(blender, iron, heavy, greatsword, materialColor){
+this.name = blender;
+this.metal = iron;
+this.weight = heavy;
+this.weapontype = greatsword;
+this.material = materialColor;
+
+}
+  placed(){
+    text(this.name + "is on ground...", 100,100);
+  }
+  displayed(){
+    text(this.name + " is displayed on wall...", 400, 190);
+  }
+  stuck(){
+    text(this.name + " is stuck in tree...", 350, 50);
+  }
+}
+var dagger = new sword("razor ", "steel", "20", "dagger", "yellow", "red")
+var axe = new sword("skullbreaker", "iron", "70", "axe", "brown", "green")
+var greatsword = new sword("king's ravanger", "iron", "170", "greatsword", "maroon")
+  function keyPressed(){
+  if(key == "d"){
+  cx+=10
+  }
+    else if (key == "a"){
+      cx-=10
+    }
+    if(key == "w"){
+      cy+=10
+    }
+    else if (key == "s"){
+      cy-=10
+    }
+  }
+  function mouseMoved(){
+    mousex = mouseX;
+    mousey = mouseY;
+  }
+  function mouseClicked(){
+    mousecx = mouseX;
+    mousecy = mouseY;
+  }
+  Ex--;
+  Ey++;
+  if(Ex <=300){
+    Ex+=100
+  }
+  else if (Ey>=200){
+    Ey-=100
+  }
+
+function setup() {
+  createCanvas(600, 500);
+  Xs[0] = 100;
+  Ys[0] = 200;
+  Diameters[0] = 0;
+  Xs[1] = 250;
+  Ys[1] = 130;
+  Diameters[1] = 55;
+  Diameters[2] = 70;
+  Xs[2] = 500;
+  Ys[2] = 100;
+  Diameters[3] = 35;
+  Xs[4] = 320;
+  Ys[4] = 300;
+  Diameters[4] = 100;
+  Xs[5] = 420;
+  Ys[5] = 400;
+  Diameters[5] = 10;
+  Xs[6] = 500;
+  Ys[6] = 480;
+  Diameters[6] = 47;
+ for(var i = 0; i < 5; i++)
+ {Xs[1] = x;
+  Ys[1] = y;
+  x += 30;
+  y += 35;
+  diameter += 25;}
+}
+
+function draw() {
+  background(35,50,150);
+  fill(200,30,150)
+  for(var i = 0; i < Xs.length; i++)
+    {
+      circle(Xs[2],Ys[1],Diameters[2]);
+    }
+  fill(200,200,50);
+  triangle(t1,t2,t3,t4,t5,t6);
+  fill(200,50,25);
+  circle(x,250, diameter);
+  fill(300,150,200);
+  ellipse(mousex,mousey,30,50);
+  dagger.placed();
+  fill(100,250,30);
+  axe.displayed();
+  fill(10,100,250);
+  greatsword.stuck();
+  ellipse(Ex,Ey,Ed,Er);
+  fill(10,350,50);
+  circle(mousecx,mousecy,30);
+  x++;
+  if(x <= 500)
+  {
+    x+=5
+  }
+  else{
+    x-=400
+  }
+  t1++;
+  t3++;
+  t5++;
+  if(t1 <= 200)
+  {
+  }
+  else{
+    t1-=200
+  }
+  if (t2 <= 400)
+    {
+    }
+  else{
+    t2-=400
+  }
+  if(t3 <= 80)
+    {
+    }
+  else{
+    t3-=80
+  }
+  if(t4 <= 100){
+  }
+  else{t4-=100
+      }
+  if(t5 <= 140){
+  }
+  else{t5-=140}
+  if(t6 <= 40){}
+  else{t6-=40}
+   fill(30,250,70)
+  circle(cx,cy,cd);
+  }
