@@ -1,0 +1,67 @@
+var Xs = [];
+var Ys = [];
+var Diameters = [];
+var Ws = [];
+var Ls =[];
+
+function setup() {
+  createCanvas(600, 460);
+  Xs[0] = 50;
+  Ys[0] = 50;
+  Diameters[0] = 30;
+  Xs[1] = 30;
+  Ys[1] = 30;
+  Diameters[1] = 120;
+  Xs[2] = 570;
+  Ys[2] = 430;
+  Xs[3] = 100;
+}
+
+function draw() {
+  background(90);
+  fill(400,200,150);
+  rect(25,25,550,415);
+  fill(100,333,200);
+  circle(570,430,120);
+  for(var i = 0; i < Xs.length; i++){
+    circle(Xs[1],Ys[1],Diameters[1]);
+    circle(Xs[1],Ys[2],Diameters[1]);
+    circle(Xs[2],Ys[2],Diameters[1]);
+    circle(Xs[2],Ys[1],Diameters[1]);
+  }
+  fill(150,20,250);
+  square(170,110,250);
+  fill(50,100,200);
+  triangle(350,290,420,290,350,360);
+  triangle(170,290,240,290,240,360);
+  triangle(170,180,240,180,240,110);
+  triangle(350,180,420,180,350,110);
+  fill(15,250,90);
+  ellipse(295,230,70,180);
+  fill(200,13,100);
+  rect(120,40,350,50);
+  rect(120,375,350,50);
+  fill(250,50,40);
+  rect(40,110,115,250);
+  rect(440,110,120,250);
+  fill(10,250,50);
+  ellipse(Xs[3],140,90,50);
+  ellipse(Xs[3],200,90,50);
+  ellipse(Xs[3],270,90,50);
+  ellipse(Xs[3],330,90,50);
+  ellipse(500,140,90,50);
+  ellipse(500,200,90,50);
+  ellipse(500,270,90,50);
+  ellipse(500,330,90,50);
+  fill(250,10,100);
+  circle(210,230,50);
+  circle(380,230,50);
+  fill(10,10,100);
+  circle(190,130,20);
+  circle(190,340,20);
+  circle(400,130,20);
+  circle(400,340,20);
+  fill(250,10,200);
+  rect(130,50,330,30);
+  rect(130,385,330,30)
+}
